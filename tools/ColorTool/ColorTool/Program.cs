@@ -221,10 +221,10 @@ namespace ColorTool
             {
                 switch (arg)
                 {
-                    case "-q":
-                    case "--quiet":
-                        quiteMode = true;
-                        break;
+                    case "-c":
+                    case "--current":
+                        PrintTable();
+                        return;
                     case "-d":
                     case "--defaults":
                         setDefaults = true;
