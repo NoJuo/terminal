@@ -1,8 +1,9 @@
 ﻿//
-//    Copyright (C) Microsoft.  All rights reserved.
+//    Copyright (C) NoJuo.  All rights reserved.
 // Licensed under the terms described in the LICENSE file in the root of this project.
 //
 using System;
+using System.Globalization;
 using System.Xml;
 using static ColorTool.ConsoleAPI;
 
@@ -45,15 +46,15 @@ namespace ColorTool
                 {
                     if (c.InnerText == RED_KEY)
                     {
-                        r = (int)(255 * Convert.ToDouble(c.NextSibling.InnerText));
+                        r = (int)(255 * Convert.ToDouble(c.NextSibling.InnerText, CultureInfo.InvariantCulture));
                     }
                     else if (c.InnerText == GREEN_KEY)
                     {
-                        g = (int)(255 * Convert.ToDouble(c.NextSibling.InnerText));
+                        g = (int)(255 * Convert.ToDouble(c.NextSibling.InnerText, CultureInfo.InvariantCulture));
                     }
                     else if (c.InnerText == BLUE_KEY)
                     {
-                        b = (int)(255 * Convert.ToDouble(c.NextSibling.InnerText));
+                        b = (int)(255 * Convert.ToDouble(c.NextSibling.InnerText, CultureInfo.InvariantCulture));
                     }
                     else
                     {
